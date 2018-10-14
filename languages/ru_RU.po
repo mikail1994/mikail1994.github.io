@@ -1,0 +1,190 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bunny v10.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-04-16 23:29+0200\n"
+"Last-Translator: Игорь <dybabiz@ya.ru>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.6.2\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: ru\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ bunny
+#: 404.php:3 functions.php:118
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+# @ bunny
+#: archive.php:4
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "День: %s"
+
+# @ bunny
+#: archive.php:5
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Месяц: %s"
+
+# @ bunny
+#: archive.php:6
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Год: %s"
+
+# @ bunny
+#: archive.php:7
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Метки: %s"
+
+# @ bunny
+#: archive.php:8
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Категория: %s"
+
+# @ bunny
+#: archive.php:9
+msgid "Archive:"
+msgstr "Архив:"
+
+# @ bunny
+#: archive.php:26 author.php:33 comments.php:13 comments.php:19 content.php:19
+#: page.php:8 search.php:18 single.php:16
+msgid "Pages: "
+msgstr "Страницы:"
+
+# @ bunny
+#: archive.php:32 author.php:39 index.php:9 search.php:24
+msgid "Next page &rarr;"
+msgstr "Следующая страница &rarr;"
+
+# @ bunny
+#: archive.php:33 author.php:40 index.php:14 search.php:25
+msgid "&larr; Previous page"
+msgstr "&larr; Предыдущая страница"
+
+# @ bunny
+#: author.php:4 functions.php:212
+#, php-format
+msgid "About %s"
+msgstr "Об %s"
+
+# @ bunny
+#: author.php:19 functions.php:219 functions.php:236 functions.php:244
+#, php-format
+msgid "View all posts by %s"
+msgstr "Просмотр всех записей %s"
+
+# @ bunny
+#: comments.php:4
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "Пожалуйста, введите пароль для просмотра комментариев."
+
+# @ bunny
+#: functions.php:10
+msgid "Header Navigation"
+msgstr "Новигация в шапке"
+
+# @ bunny
+#: functions.php:57
+msgid "Read more: "
+msgstr "Подробнее: "
+
+# @ bunny
+#: functions.php:82
+msgid "Untitled"
+msgstr "Без названия"
+
+# @ bunny
+#: functions.php:92
+msgid "Footer Sidebar"
+msgstr "Виджеты в подвале"
+
+# @ bunny
+#: functions.php:93
+msgid "Widgets in this area will be shown in the footer."
+msgstr "Виджеты выводятся в низу сайта"
+
+# @ bunny
+#: functions.php:115
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+# @ bunny
+#. translators: 1: date, 2: time
+#: functions.php:156
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+# @ bunny
+#: functions.php:156
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+# @ bunny
+#: functions.php:162
+msgid "Your comment is awaiting moderation."
+msgstr "Спасибо! Ваш комментарий ожидает проверки."
+
+# @ bunny
+#: functions.php:169
+msgid "Reply"
+msgstr "Ответ"
+
+# @ bunny
+#: functions.php:182
+msgid "Home"
+msgstr "Главная"
+
+# @ bunny
+#: functions.php:255
+msgid "Category"
+msgstr "Категория"
+
+# @ bunny
+#: functions.php:262
+msgid "Tags"
+msgstr "Метки"
+
+# @ bunny
+#: inc/customizer.php:5
+msgid "Easter eggs"
+msgstr "Пасхальные яйца"
+
+# @ bunny
+#: inc/customizer.php:17
+msgid ""
+"Adjust the value of the arc to match the length of your site title. Set a "
+"small number for a high arc, and high number for a low arc."
+msgstr ""
+
+# @ bunny
+#: inc/customizer.php:29
+msgid "Adjust the value of the arc to match the length of your tagline"
+msgstr "Настройте дугу слогана в соответствии с длиной"
+
+# @ bunny
+#: inc/customizer.php:40
+msgid "Check this box to turn Bunny into the Easter bunny!"
+msgstr "Установите этот флажок, чтобы включить Банни в Пасхальном кролике!"
+
+# @ bunny
+#: search.php:3
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результат поиска для: %s"

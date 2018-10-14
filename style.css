@@ -1,0 +1,984 @@
+/*
+Theme Name: Bunny
+Theme URI: http://wordpress.org/themes/bunny
+Author: Carolina Nymark
+Author URI: http://layout.nu/about/
+Description: Fluffy friendly and cute! 'Bunny' is an animated one column theme suitable for pet lovers and kids. -Just one click in the theme customizer turns Bunny into the Easter bunny! The theme is responsive and translation ready with one custom menu, a widget area in the footer, sticky posts and threaded comments. Swedish language files are included.
+Version: 10.2
+Tags: white, blue, threaded-comments, custom-menu, sticky-post, translation-ready, one-column, editor-style, featured-images, theme-options
+Text Domain: bunny
+License: MIT
+License URI: http://opensource.org/licenses/MIT
+Copyright 2014 Carolina Nymark
+*/
+
+html {
+	-webkit-text-stroke: 1px rgba(0,0,0,0.1);
+	-webkit-font-smoothing: antialiased;
+	background: url(images/sky.png) repeat-x fixed;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+body {
+	margin:0;
+	font-family: 'Open Sans', arial,sans-serif;
+	line-height: 1;
+}
+
+body.admin-bar .navbar {
+  position:fixed;
+  top: 28px;
+  z-index: 2147483647; /*max z-index*/
+  height: 40px;
+}
+
+a{
+	text-decoration:none; 
+	color:#6699ff;
+}
+
+table{margin:4px 4px 10px 4px; border-collapse:collapse;}
+td{border:1px solid #f5f5f5; padding:4px;}
+th{background:#f5f5f5;}
+
+#header{
+	position: relative;
+	width: 100%;
+	z-index:102;
+	min-height:160px;
+}
+
+.logo{
+    width: 100%;
+	height:146px;
+	padding:0;
+	margin-bottom:-150px;
+	text-align:center; 
+}
+
+.site-title{
+	position: relative;
+	top:0;
+	text-align:center;
+	font-size: 3.9em;
+	font-weight: bold;
+	font-family: 'Oswald', arial,sans-serif;
+	z-index: 105;
+	width:100%;
+ }
+
+.site-description {
+	position: relative;
+	top:-19px;
+	text-align:center;
+	font-size: 1.4em;
+	font-weight: bold;
+	font-family: 'Open Sans Condensed', arial,sans-serif;
+	width:100%;
+	z-index: 105;
+}
+
+.wrapper {
+	position:relative;
+	float:left;
+	margin-top:40px;
+	margin-left:480px;
+	margin-bottom:40px;
+	width:50%;	
+	clear:both;
+	background:#fff; 
+	border-radius:40px;
+	border:10px solid #e9e9e9;
+	z-index:100;
+}
+.clear{display:block; height:20px; width:70%;line-height:1em; border:0; clear:both;}
+/*Add cuteness*/
+.stage {
+	position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    min-width: 900px;
+    height: 245px;
+    overflow: hidden;
+    z-index: -1;
+}
+		
+.far-clouds {
+    background: transparent url(images/cloud1.png) 500px 94px repeat-x fixed;
+	 z-index: -2;
+}
+.near-clouds {
+    background: transparent url(images/cloud2.png)0px 63px repeat-x fixed;
+	z-index: -1;
+}
+
+.sol{
+	position: fixed;
+    top:10%;
+    left: 10%;
+    width: 140px;
+    height: 130px;
+    overflow: hidden;
+    z-index:-3;/*Display behind the clouds*/
+    background: transparent url(images/sun.png)no-repeat;
+}
+		
+.kaninf{
+	position: fixed;
+    top:40%;
+    left: 20px;
+    width: 436px;
+    height: 443px;
+    overflow: hidden;
+    z-index: 2; /*Display in front of grass*/
+    background: transparent url(images/kanin.png)no-repeat;
+}
+
+.grass {
+	position: fixed;
+    top:80%;
+    left: 0;
+    width: 100%;
+    min-width: 900px;
+    height: 184px;
+    overflow: hidden;
+    z-index: -1;
+    background: transparent url(images/grass.png)repeat-x;
+}
+
+/*Add a smaller bunny for smaller screens*/
+.kaninsmall{position:relative; float:left; z-index:99999; visibility:hidden;}
+
+
+/* =Header Menu
+-------------------------------------------------------------- */
+#header-menu {
+	display: block;
+	float: left;
+	width: 100%;
+	font-size:1em;
+	font-family: 'Oswald', arial,sans-serif;
+	background: url(images/40.png);
+}
+
+#header-menu a {
+	color:#fff;
+}
+
+#header-menu ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#header-menu li {
+	float: left;
+	position: relative;
+}
+#header-menu a {
+	display: block;
+	line-height: 2em;
+	margin-right: 0.7em;
+	margin-left:0.7em;
+	padding-bottom:6px;
+}
+
+#header-menu ul li ul li{
+	border-bottom:1px solid #fff;
+}
+
+/*sub menu level 2*/
+#header-menu ul ul {
+	display: none;
+	font-size:0.9em;
+	float: left;
+	position: absolute;
+	top: 2.4em;
+	line-height: 4em;
+	left: 0;
+	z-index: 99999;
+	width:170px;
+	padding-right:1em;
+	clear:both;
+	background: #2c6580;
+
+}
+#header-menu ul ul a {
+	line-height: 1em;
+	padding: .5em 0 .5em 1em;
+	width:167px;
+	margin:0;
+}
+
+/* sub menu level 3-5*/
+#header-menu ul ul ul,
+#header-menu ul ul ul ul,
+#header-menu ul ul ul ul ul
+ {
+	display: none;
+	font-size:1em;
+	float: left;
+	position: absolute;
+	top:0;
+	line-height: 4em;
+	left:180px;
+	z-index: 99999;
+	width:170px;
+}
+
+#header-menu ul li:hover > ul {
+	display: block;
+}
+
+/* =Content
+-------------------------------------------------------------- */
+.post,
+.type-attachment
+{
+	line-height: 1.5;
+	margin:0;
+	width:100%;
+	padding:2em 2em 1em 2em;
+	color:#333;
+	font-family:Verdana,Georgia,Serif;
+	overflow:hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;     
+	border-bottom:2px dashed #ccc;
+}
+.page404, .type-page{
+	border:none;
+	padding:2em;
+	line-height: 1.5;
+}
+
+.post-title{
+	display:block;
+	line-height:1.5;
+	padding-bottom:0.5em;
+	padding-top:0;
+	margin:0;
+	clear:both;
+	color:#6699ff;
+	font-family: 'Oswald', arial,sans-serif;
+}
+.post-title a{vertical-align:top;}
+
+.archive-title{
+	color:#6699ff;
+	padding:1em;
+	padding-bottom:0.5em;
+	margin:0;
+}
+
+.crumbs{
+	font-size:0.8em;
+	clear:both;
+	margin-bottom:1.3em;
+	
+}
+.crumbs i{opacity:0.3;}
+.crumbs a{opacity:1.0;}
+.crumbs a:hover{
+	text-decoration:none;
+}
+.meta {
+	clear: both;
+	margin-top:25px;
+	margin-left:-5px;
+	font-size:0.6em;
+	line-height:36px;
+}
+
+.attachment_nav_clear{float:right; clear:both; margin:4px;}
+.fullimg{width:100%; float:left; clear:both; margin:6px;}
+
+/*author info
+-------------------------------------------------------------- */
+.author-info {
+	clear:both;
+	font-size:1em;
+	line-height: 20px;
+	overflow: hidden;
+	min-height:45px;
+	margin:0;
+	margin-top:5px;
+	padding:7px;
+	padding-left:0;
+}
+.author .wrapper .author-info {
+	padding-left:2em;
+}
+
+.author-info .author-link{
+	padding-top:6px;
+}
+
+.author-info .author-link a {
+	color:#6699ff;
+}
+
+.author-info .author-avatar {
+	float:left;
+	height:60px;
+	width:60px;
+	margin:10px;
+	margin-left:0;
+}
+
+.author-info .author-avatar img{
+	padding:7px;
+	border-radius:32px;
+	border:2px dashed #cccccc;
+	margin-bottom:-20px;
+}
+
+.author-avatar img:hover{border:2px dashed #aed2e7;}
+
+.author-info .author-description {
+	float:left;
+	margin:10px 10px 10px 30px;
+	font-size:1.4em;
+}
+.author-info h2 {
+	font-size:1.4em;
+	font-weight:bold;
+	margin:0;
+}
+
+.sticky
+{	position:relative;
+	z-index:7;
+	float:left;
+	width:100%;
+	padding-bottom:1em;
+	padding-left:2em;
+	color:#666;
+	margin:0px;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box; 
+	font-size:.8em;
+	border-bottom:2px dashed #ccc;
+}
+
+.pinned, .author-links, .edit-links, .comment-icon, .reply-link, .meta .avatar {
+	margin-top:8px;
+	color:#ccc;
+	padding:9px;
+	background:#fefefe;
+	border-radius:32px;
+	border:2px dashed #ccc;
+	line-height:55px;
+	text-align:center;
+	}
+
+.pinned{margin-right:2px; padding-left:14px; padding-right:14px;}
+.author-links{margin-right:2px; padding-left:11px; padding-right:11px;}
+.cat-links{vertical-align:middle; padding-left:5px; padding-right:11px;}
+.tag-links{vertical-align:middle; padding-left:5px; padding-right:11px;}
+.edit-links{vertical-align:middle; padding-left:10px; padding-right:10px; margin-top:-19px; margin-left:2px;}
+.meta .avatar{vertical-align:middle; margin-top:-13px; margin-right:2px; margin-bottom:6px;}
+
+
+/*wider border to make room for category and tags*/
+.cat-links2, .tag-links2{
+	position:relative;
+	top:-7px;
+	color:#cccccc;
+	padding-top:18px;
+	padding-bottom:18px;
+	padding-left:7px;
+	padding-right:12px;
+	background:#fefefe;
+	border-radius:32px;
+	border:2px dashed #cccccc;
+	display: inline;
+	line-height:54px;
+	margin-left:3px;
+}
+
+.cat-links2:hover, .cat-links2:focus{
+	color:#6699ff;
+	border:2px dashed #aed2e7;
+}	
+.tag-links2:hover{
+	color:#6699ff;
+	border:2px dashed #aed2e7;
+}
+
+.pinned:hover, .author-links:hover, .edit-links:hover, .comment-icon:hover, .reply-link:hover{
+	color:#6699ff;
+	border:2px dashed #aed2e7;
+}
+
+.date{color:#666; margin-top:-32px; margin-left:57px; margin-bottom:30px;height:1em; font-size:0.8em}
+.date:hover{color:#6699ff;}
+
+.post-date{color:#666; margin-top:-17px; margin-bottom:9px; font-size:0.8em}
+.post-date:hover{color:#6699ff;}
+
+.sticky .crumbs, 
+.sticky .meta{display:none;}
+
+.search-post{
+	margin:0;
+	clear:both;
+	overflow:hidden;
+	padding:2em;
+	padding-bottom:0;
+	min-height:5px;
+	color:#666;
+	position:relative;
+}
+
+/* Navigation 
+----------------------------------------*/
+.more-link {
+	clear:both;
+	padding-top:3px;
+}
+.page-link {
+	clear:both;
+	padding-top:3px;
+	padding-bottom:12px;
+}
+
+.page-link a:hover,
+.more-link a:hover{
+	text-decoration:underline;
+}
+.older-posts,
+.newer-posts{
+	font-family: 'Oswald', arial,sans-serif;
+	font-size:1.4em;
+	min-width:100px;
+	padding:6px 0 6px 6px;
+	min-height:15px;
+	margin:30px 10px 25px 5px;
+	color:#6699ff;
+}
+
+.newer-posts{
+	float:right;
+	text-align:right;
+}
+.older-posts{
+	float:left;
+}
+
+.paged-comments{
+	padding:1em; 
+	min-height:15px;
+	font-family: 'Oswald', arial,sans-serif;
+}
+
+/* =Images and objects
+-------------------------------------------------------------- */
+
+@media \0screen {
+  img, object{
+  	width: auto; /* for ie 8 */
+  }
+}
+
+img,
+object {
+     max-width: 100%;
+	 height: auto;
+}
+
+a img {border: none;}
+p img {margin: 0.5em;}
+
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%; 
+	height: auto;
+}
+
+.attachment-thumbnail{	
+	border-radius:4px;
+	}
+	
+.type-attachment .attachment-thumbnail{margin:8px;}
+
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+
+.wp-caption {
+	max-width:100%;
+	padding: 5px;
+	text-align: center;
+}
+.wp-caption .alignone{max-width:100%;}
+
+.wp-caption img {
+	margin: 5px;
+}
+dl.gallery-item, .wp-caption, .wp-caption-text {
+	color:#6699ff;
+	font-size:0.9em;
+}
+.gallery-caption {font-size:0.8em; color:#666;}
+.wp-smiley {
+	margin: 0;
+}
+object{margin:15px;}
+
+blockquote{border-left:3px solid #6699ff; padding:5px 0 5px 10px;}
+
+/* =Comments
+-------------------------------------------------------------- */
+#comments {
+	clear: both;
+	width:100%;
+	margin:0;
+	padding:0;
+	margin-bottom:30px;
+}
+
+#comments .navigation {
+	padding:0 0 18px 0;
+}
+h2#comments-title{
+	padding:1em;
+	padding-left:0.6em;
+	padding-bottom:0;
+	text-decoration:none;
+	font-family: 'Oswald', arial,sans-serif;
+	font-weight:bold;
+	font-size: 1.5em;
+}
+.commentlist {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.commentlist .children {
+	list-style:none;
+	margin:0;
+
+}
+.commentlist .children .comment-body{}
+
+.comment-body{
+	font-size:1.2em;
+	padding:1em;
+	min-height:5px;
+	line-height:1.5;
+	margin-bottom:4px;
+	overflow:hidden;
+	border-bottom:2px dashed #ccc;
+}
+.comment-body p {
+	margin:0;
+	padding:0;
+}
+.comment-body a{
+	text-decoration:none;
+}
+.comment-meta{
+	font-size:0.6em;
+	margin-left:64px;
+}
+.comment-author {
+	margin:0;
+	padding:0;
+	font-weight:bold; 
+	font-size:1em;
+	min-height:50px;
+	width:100%;
+	margin-bottom:10px;
+}
+.comment-author .avatar{
+	padding:7px;
+	border-radius:32px;
+	border:2px dashed #cccccc;
+	margin-bottom:-20px;
+}
+
+.comment-author .avatar:hover, .meta .avatar:hover {border:2px dashed #aed2e7;}
+
+.avataroff{
+	padding:7px;
+	padding-left:11px; padding-right:11px;
+	margin-top:8px;
+	margin-bottom:-20px;
+	border-radius:32px;
+	border:2px dashed #cccccc;
+	color: #cccccc;
+	vertical-align:middle;
+}
+
+.avataroff:hover{color:#6699ff; border:2px dashed #aed2e7;}
+
+.comment-author .fn{margin-top:-35px; margin-left:64px; font-size:1em;}
+/*.comment-author .fn a:hover{color:#aed2e7;}*/
+
+.comment-edit-link{
+	color:#fff;
+	font-size:.9em;
+}
+/*
+.bypostauthor .comment-author {}
+.bypostauthor .comment-body {}
+*/
+.comment-form-comment label {margin-right:6px;}
+
+.reply {
+	float:right;
+}
+
+.children li.depth-5 .reply{
+	visibility:hidden;
+}
+
+.nopassword, .nocomments {
+	display: none;
+}
+.pingback {
+	color:#6699ff;
+}
+.pingback a{
+	text-decoration:none;
+}
+
+/* Comments form
+-------------------------------------------------------------- */
+input[type=text]{border:1px solid #ccc; height:26px; padding:3px; border-radius:4px; margin:10px;}
+
+input[type=submit] {
+	color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+ }
+  
+input[type=submit]:focus { 
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+  text-decoration: none;
+   color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+input[type=submit]:active,
+input[type=submit].active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.comment-form-comment label{visibility:hidden;}
+
+#respond {
+	overflow:hidden; 
+	position:relative; 
+	padding:0 2em 0 2em;
+}
+#cancel-comment-reply-link{
+	font-size:.9em;
+	font-weight:normal;
+}
+#respond a{}
+#respond p{
+	margin:0;
+}
+#respond .logged-in-as{
+	padding-bottom:6px;
+	font-size:.9em;
+}
+#respond .logged-in-as a{
+		text-decoration:underline;
+}
+#respond .comment-notes{
+	font-size:12px;
+	line-height:16px;
+	margin-bottom: 1em;
+}
+#respond .required {
+	color:#cc6666;
+	font-weight: bold;
+}
+.comment-form-comment label,
+#respond textarea {
+	padding:6px;
+	width:80%;
+	float:left;
+	clear:both;
+}
+#respond .form-allowed-tags {
+	margin-top:14px;
+	margin-bottom:14px;
+	font-size:.9em;
+	line-height:1em;
+	float:left;
+	clear:both;
+}
+
+#respond .form-submit {
+	margin: 12px 0;
+}
+#respond .form-submit input {
+	font-size:.9em; width: auto;
+}
+
+/* =Widgets
+-------------------------------------------------------------- */
+.footer ul{
+	padding:0 0 2em 0;
+}
+
+.widget{
+	width:100%;
+	list-style: none;
+	position:relative;
+	float:left;
+	padding:2em 2em 0 2em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;	
+}
+
+.widgettitle{
+	margin-top:0;
+	padding:0;
+	font-weight:bold;
+	font-family: 'Oswald', arial,sans-serif;
+	font-size:1.5em;
+}
+
+.widget ul{
+	font-size:.9em;
+	padding:0;
+	margin:0;
+	float:left;
+	width:100%;
+}
+.widget ul li{
+	list-style: none;
+	font-weight:normal;
+	margin-left:9px;
+	margin-top:6px;
+	margin-bottom:9px;
+	padding:0;
+	text-align:left;
+	color:#6699ff;	
+}
+#calendar_wrap{
+	padding-top:5px;
+	font-size:.9em;
+}
+
+.widget_calendar .widgettitle {
+	display:none;
+}
+table#wp-calendar,
+#wp-calendar {
+	font-weight:normal;
+	padding:5px;
+}
+#wp-calendar th{color:#6699ff;}
+#wp-calendar a {
+	color:#6699ff;
+	text-decoration:underline;
+}
+#wp-calendar caption {
+	font-family: 'Oswald', arial,sans-serif;
+	font-size:18px;
+	margin-bottom:8px;
+}
+
+.widget ul li a,
+.tagcloud a {
+	color:#6699ff;
+}
+.textwidget{
+	color:#6699ff;
+	padding:10px;
+	overflow:hidden;
+}
+
+.widget_search form, 
+.searchform form {margin-top:3px;}
+
+.widget_search input, 
+.search-post input, #s{
+	margin:3px;
+	/*padding:3px;*/
+}
+
+.widget_rss ul li {margin-bottom:25px; width:97%;}
+.rssSummary{width:90%;}
+.rss-date{width:90%; float:left; clear:both;}
+
+select {
+    max-width: 150px !important;
+    overflow: hidden;
+}
+option {
+    max-width: 120px !important;
+    overflow: hidden;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+.footer {
+	margin:0 auto;
+	margin-left:480px;
+	padding:0 0 2em 0;
+	width:50%;
+	clear:both;	
+	background:#fff; 
+	border-radius:40px;
+	border:10px solid #e9e9e9;
+	float:left;
+	z-index:100;
+	position:relative;
+}
+
+/* Alignment 
+-------------------------------------------------------------- */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+/* Responsive 
+-------------------------------------------------------*/
+
+@media screen and (max-width:1024px){
+	.wrapper, .footer{width:45%;}
+}
+
+@media screen and (max-width:780px){
+	.wrapper, .footer{margin-left:20px; width:90%;}
+	.footer {margin-bottom:20px;}
+	.kaninf{visibility:hidden;}
+	.kaninsmall{margin:0 auto; position:relative; left:30%; z-index:99999; visibility:visible; 
+	background: transparent url(images/kanin2.png)no-repeat; width:175px; height:177px;}
+	.site-title {font-size:2.6em;}
+	#header-menu{font-size:1em;}
+	
+	.author-info .author-avatar img, .author-avatar img:hover, .sticky, .pinned, .author-links, .edit-links, .comment-icon, .reply-link,
+	.cat-links2, .tag-links2, .cat-links2:hover, .tag-links2:hover, .pinned:hover, .author-links:hover, .edit-links:hover, .comment-icon:hover, .reply-link:hover, 
+	.comment-author .avatar, .comment-author .avatar:hover, .avatoroff:hover{border:none;}
+	
+}
+
+@media screen and (max-width:600px){
+	html{background:url(images/blue.png) repeat;}
+	.wrapper, .footer{margin-left:1%; width:90%;}
+	.footer {margin-bottom:20px;}
+	.kaninf{visibility:hidden;}
+	.kaninsmall{margin:0 auto; position:relative; left:30%; z-index:99999; visibility:visible; 
+	background:transparent url(images/kanin2.png)no-repeat; width:175px; height:177px;}
+	.site-title{clear:both;}
+	#header-menu li ul {visibility:hidden;}
+	.older-posts,.newer-posts{font-size:1em;}
+	body{border:0px solid;}
+	
+}
+
+
+
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg'), url('fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ font-size: 32px;
+}
+
+.cat-links:before{
+	content: "\f07c";
+}
+.edit-links:before {
+	content: "\f14b";
+}
+.tag-links:before {
+	content: "\f02b";
+}
+.author-links:before, .avataroff:before{ 
+	content: "\f007";
+}
+
+.comment-icon:before {
+	content: "\f086";
+}
+
+.pinned:before {
+	content: "\f08d";
+}
+
+.reply-link:before {
+	content: "\f112";
+}
